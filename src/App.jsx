@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home.index";
 import About from "./pages/About";
 import Works from "./pages/Works/Works.index";
 import StudyCase from "./pages/Works/works-components/StudyCase/StudyCase.index";
-
+import { FaMoon, FaSun } from "react-icons/fa";
 //CONTEXT
 import {
   createContext,
@@ -60,16 +60,23 @@ const ThemeSwitcher = () => {
         Changer le theme ({ctxValue.themeName})
       </button>
 
-      {/* <div>
-        <input type="checkbox" className="checkbox" id="checkbox" />
+      <div>
+        <input
+          type="checkbox"
+          className="checkbox"
+          id="checkbox"
+          onClick={ctxValue.toggleTheme}
+        />
         <label for="checkbox" className="label">
           <span className="fas fa-moon">
             <FaMoon />
           </span>
-          <span className="fas fa-sun"></span>
+          <span className="fas fa-sun">
+            <FaSun />
+          </span>
           <div className="ball"></div>
         </label>
-      </div> */}
+      </div>
     </>
   );
 };

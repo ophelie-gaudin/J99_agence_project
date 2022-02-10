@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background 0.2s linear;
 }
 
 code {
@@ -25,12 +26,30 @@ text-link {
 }
 
 /* Theme switcher */
+
+* {
+  box-sizing: border-box;
+}
+
 .label {
   width: 50px;
   height: 26px;
   background-color: #111;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 50px;
+  padding: 5px;
+  position: relative;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
 }
 
 .fa-moon {
@@ -39,4 +58,15 @@ text-link {
 
 .fa-sun {
   color: #f39c12;
+}
+
+.ball {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
 }
