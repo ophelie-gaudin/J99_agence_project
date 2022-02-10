@@ -26,7 +26,6 @@ function StudyCase() {
       <div className="container w-full">
         <div className="border border-black w-[60%] p-4 mx-auto">
           <h1 className="mt-5">{currentStudyCase.title}</h1>
-          {/* <h6 className="mb-5">The study case slug is, {studyCaseSlug}</h6> */}
           <p>{currentStudyCase.description}</p>
         </div>
       </div>
